@@ -1,3 +1,6 @@
+let interval = null;
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
 function setup() {
   setupHeader();
   setupIntro();
@@ -5,22 +8,18 @@ function setup() {
 
 function setupHeader() {
   const left = document.getElementById("left-side");
-  
+  const header = document.getElementById("header");
   const handleMove = (e) => {
     left.style.width = `${(e.clientX / window.innerWidth) * 100}%`;
   };
 
-  document.onmousemove = (e) => handleMove(e);
-  document.ontouchmove = (e) => handleMove(e.touches[0]);
+  header.onmousemove = (e) => handleMove(e);
+  header.ontouchmove = (e) => handleMove(e.touches[0]);
 }
 
 function setupIntro() {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-  let interval = null;
-
-  document.querySelector("h2").onmouseover = (event) => {
-    text = "I'm Jared.";
+  document.getElementById("greeting").onmouseover = (event) => {
+    text = "I'm Jared. \n Nice to meet you!";
     let iteration = 0;
 
     clearInterval(interval);
@@ -41,11 +40,16 @@ function setupIntro() {
         clearInterval(interval);
       }
 
-      iteration += 1 / 4;
+      iteration += 1 / 3;
     }, 30);
+    document.getElementById("greeting").onmouseover = null;
   };
 }
 
 function resetHeadline() {
-  document.querySelector("h2").innerText = "Hi!😇";
+  clearInterval(interval);
+  setupIntro();
+  document.getElementById(
+    "greeting"
+  ).innerHTML = `Hi!<span class="emoji">😇</span>`;
 }
