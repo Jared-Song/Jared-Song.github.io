@@ -1,10 +1,19 @@
+html {
+  overflow: auto;
+}
+
 body {
-  display: grid;
   place-items: center;
   height: 100vh;
   background-color: black;
-  margin: 0rem;
-  overflow: hidden;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+div {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 * {
@@ -12,11 +21,11 @@ body {
   color: white;
 }
 
-h1 {
+h2 {
   font-size: clamp(3rem, 10vw, 10rem);
 }
 
-h2:hover {
+h3:hover {
   background-color: white;
   color: black;
   padding: 0rem clamp(1rem, 2vw, 3rem);
@@ -35,4 +44,67 @@ button:hover {
   background-color: white;
   color: black;
   padding: 0rem clamp(1rem, 2vw, 3rem);
+}
+
+:root {
+  --dark: rgb(20, 20, 20);
+  --yellow: rgb(253, 216, 53);
+  --blue: rgb(98, 0, 234);
+  --purple: rgba(97,54,170,255);
+  --orange: rgba(236,159,33,255);
+  --dark-orange: rgba(249,168,36,255);
+}
+
+#intro {
+  margin: 0;
+  width: 100%;
+  place-items: center;
+  display: grid;
+}
+
+.side {
+  font-size: 5rem;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  position: absolute;
+}
+
+.side .title {
+  font-family: "Rubik", sans-serif;
+  font-size: 12vw;
+  margin: 0px 10vw;
+  width: 80vw;
+}
+
+.side .fancy {
+  font-family: "Lobster", cursive;
+  font-size: 1.3em;
+  line-height: 0.8em;
+}
+
+#left-side {
+  background-color: var(--purple);
+  width: 50%;
+  z-index: 2;
+}
+
+#left-side .title {  
+  color: white;  
+}
+
+#left-side .fancy {
+  color: var(--orange);
+}
+
+#right-side {
+  background-color: var(--dark-orange);
+}
+
+#right-side .title {
+  color: var(--dark);
+}
+
+#right-side .fancy {
+  color: white;
 }

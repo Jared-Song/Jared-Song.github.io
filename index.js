@@ -1,10 +1,26 @@
 function setup() {
+  setupHeader();
+  setupIntro();
+}
+
+function setupHeader() {
+  const left = document.getElementById("left-side");
+  
+  const handleMove = (e) => {
+    left.style.width = `${(e.clientX / window.innerWidth) * 100}%`;
+  };
+
+  document.onmousemove = (e) => handleMove(e);
+  document.ontouchmove = (e) => handleMove(e.touches[0]);
+}
+
+function setupIntro() {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   let interval = null;
 
-  document.querySelector("h1").onmouseover = (event) => {
-    text = "I'm Jared"
+  document.querySelector("h2").onmouseover = (event) => {
+    text = "I'm Jared.";
     let iteration = 0;
 
     clearInterval(interval);
@@ -31,5 +47,5 @@ function setup() {
 }
 
 function resetHeadline() {
-  document.querySelector("h1").innerText = "Hi!😇";
+  document.querySelector("h2").innerText = "Hi!😇";
 }

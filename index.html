@@ -6,11 +6,29 @@
     <title>Portfolio</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lobster|Rubik"
+    />
   </head>
 
   <body onload="setup()">
-    <h1>Hi!😇</h1>
-    <button onclick="resetHeadline()">Reset</button>
-    <h2>This is my portfolio right now. Stay tuned for updates...</h2>
+    <div id="header">
+      <div id="left-side" class="side">
+        <h1 class="title">
+          Today is going to be <span class="fancy">awesome</span>
+        </h1>
+      </div>
+      <div id="right-side" class="side">
+        <h1 class="title">
+          Today is going to be <span class="fancy">awesome</span>
+        </h1>
+      </div>
+    </div>
+    <div id="intro">
+      <h2>Hi!😇</h2>
+      <button onclick="resetHeadline()">Reset</button>
+      <h3>This is my portfolio right now. Stay tuned for updates...</h3>
+    </div>
   </body>
 </html>
