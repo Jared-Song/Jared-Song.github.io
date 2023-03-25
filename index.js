@@ -2,6 +2,7 @@ let interval = null;
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function setup() {
+  setupHome();
   setupHeader();
   setupIntro();
 }
