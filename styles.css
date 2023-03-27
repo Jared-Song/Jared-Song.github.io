@@ -66,12 +66,8 @@ button:hover {
 }
 
 :root {
-  --dark: rgb(20, 20, 20);
-  --yellow: rgb(253, 216, 53);
-  --blue: rgb(98, 0, 234);
   --purple: rgba(97, 54, 170, 255);
   --orange: rgba(236, 159, 33, 255);
-  --dark-orange: rgba(249, 168, 36, 255);
 }
 
 #intro {
@@ -117,13 +113,13 @@ button:hover {
 }
 
 #right-side {
-  background-color: var(--dark-orange);
+  background-color: var(--orange);
 }
 
 #right-side .title {
-  color: var(--dark);
+  color: black;
 }
 
 #right-side .fancy {
-  color: white;
+  color: var(--orange);
 }

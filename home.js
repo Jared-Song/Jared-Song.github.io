@@ -30,5 +30,5 @@ function setupHome() {
     wrapper.dataset.roundness = combination.roundness;
 
     prev = index;
-  }, 3000);
+  }, 2500);
 }
