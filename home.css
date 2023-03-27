@@ -5,10 +5,10 @@
 
 #home {
   aspect-ratio: 1.618;
-  /* width: 66.85rem;
-  height: 41.9rem; */
-  width: 42vw;
-  height: 25vw;
+  width: 66.85rem;
+  height: 41.9rem;
+  /* width: 42vw;
+  height: 25vw; */
   position: relative;
 }
 

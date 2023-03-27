@@ -4,6 +4,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 function setup() {
   setupHome();
   setupHeader();
+  setupGallery();
   // setupIntro();
 }
 
