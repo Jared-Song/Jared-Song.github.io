@@ -1,13 +1,11 @@
 #gallery {
   display: flex;
   gap: 4vmin;
-  margin: 0rem;
-  /* position: absolute; */
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(0%, -50%);
   user-select: none; /* -- Prevent image highlighting -- */
-  overflow: hidden;
 }
 
 #gallery > .image {
