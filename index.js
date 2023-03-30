@@ -1,4 +1,3 @@
-let interval = null;
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function setup() {
@@ -6,7 +5,7 @@ function setup() {
   setupHeader();
   setupGallery();
   setupBlob();
-  // setupIntro();
+  setupWordEffects();
 }
 
 function setupBlob() {
@@ -36,39 +35,37 @@ function setupHeader() {
   header.ontouchmove = (e) => handleMove(e.touches[0]);
 }
 
-function setupIntro() {
-  document.getElementById("greeting").onmouseover = (event) => {
-    text = "I'm Jared. \n Nice to meet you!";
-    let iteration = 0;
+function setupWordEffects() {
+  let links_interval;
+  let projects_interval;
+  const screen = document.querySelector(".screen");
+  const links = document.getElementById("link-sub-heading");
+  const projects = document.getElementById("projects-sub-heading");
 
-    clearInterval(interval);
-
-    interval = setInterval(() => {
-      event.target.innerText = text
-        .split("")
-        .map((letter, index) => {
-          if (index < iteration) {
-            return text[index];
-          }
-
-          return letters[Math.floor(Math.random() * letters.length)];
-        })
-        .join("");
-
-      if (iteration >= text.length) {
-        clearInterval(interval);
-      }
-
-      iteration += 1 / 3;
-    }, 30);
-    document.getElementById("greeting").onmouseover = null;
+  screen.onmouseenter = () => {
+    clearInterval(links_interval);
+    clearInterval(projects_interval);
+    links_interval = setLetterInterval(links_interval, links);
+    projects_interval = setLetterInterval(projects_interval, projects);
   };
 }
 
-function resetHeadline() {
-  clearInterval(interval);
-  setupIntro();
-  document.getElementById(
-    "greeting"
-  ).innerHTML = `Hi!<span class="emoji">😇</span>`;
+function setLetterInterval(interval, element) {
+  let iteration = 0;
+  return setInterval(() => {
+    element.innerText = element.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return element.dataset.value[index];
+        }
+
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+    if (iteration >= element.dataset.value.length) {
+      clearInterval(interval);
+    }
+    iteration += 1 / 3;
+  }, 30);
 }
