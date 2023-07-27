@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="home.js"></script>
+    <script src="index.js"></script>
+    <script src="gallery.js"></script>
+
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lobster|Rubik"
+    />
+  </head>
+
+  <body onload="setup()">
+    <div id="header">
+      <div id="left-side" class="side">
+        <h1 class="title">Hi! My name is <span class="fancy">Jared</span></h1>
+      </div>
+      <div id="right-side" class="side">
+        <h1 class="title">Hi! My name is <span class="fancy">Jared</span></h1>
+      </div>
+    </div>
+    <div id="wrapper">
+      <div id="home" data-configuration="1" data-roundness="1">
+        <div class="home-shape"></div>
+        <div class="home-shape"></div>
+        <div class="home-shape"></div>
+        <div class="home-shape"></div>
+        <div class="home-shape"></div>
+        <div class="home-shape"></div>
+        <div class="home-shape"></div>
+      </div>
+      <a class="home-link" style="opacity: 1; visibility: inherit"
+        >Jared Song</a
+      >
+    </div>
+    <div>
+      <div id="gallery" data-mouse-down-at="0" data-prev-percentage="0">
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false"
+        />
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+          draggable="false"
+        />
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false"
+        />
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false"
+        />
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false"
+        />
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2134&q=80"
+          draggable="false"
+        />
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80"
+          draggable="false"
+        />
+        <img
+          class="image"
+          src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          draggable="false"
+        />
+      </div>
+    </div>
+
+    <div id="screen-container">
+      <div class="screen">
+        <div class="screen-image"></div>
+        <div class="screen-overlay"></div>
+        <div class="screen-content">
+          <i class="screen-icon fa-brands fa-codepen"></i>
+          <div class="screen-user">
+            <span id="link-sub-heading" class="sub-heading" data-value="Links">Links</span>
+            <a class="link" href="https://github.com/Jared-Song" target="_blank"
+              >Github</a
+            >
+            <a
+              class="link"
+              href="https://www.linkedin.com/in/jared-song/"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a
+              class="link"
+              href="https://www.instagram.com/jared.song/"
+              target="_blank"
+              >Instagram</a
+            >
+            <a class="link" href="mailto:jaredjrsong@gmail.com" target="_blank"
+              >Email</a
+            >
+            <span id="projects-sub-heading" class="sub-heading" data-value="Projects">Projects</span>
+            <a
+              class="link"
+              href="https://jared-song-pokedex.vercel.app/"
+              target="_blank"
+              >Pokedex</a
+            >
+          </div>
+        </div>
+      </div>
+      <div id="blob"></div>
+      <div id="blur"></div>
+    </div>
+  </body>
+</html>
